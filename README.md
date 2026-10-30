@@ -1,19 +1,27 @@
-# Plakoro Companion v1.1 beta
+# Plakoro Companion v2.0
 
-Static web app (single index.html, no build step) for tracking HP, move cards and match score in Pokémon Plakoro (30th Anniversary edition).
+Static web app (single index.html, no build step) for playing Pokémon Plakoro (30th Anniversary edition): HP counter, move cards with cooldown, match score.
 
-## What is in 1.1 beta
+## Modes
 
-- Three modes: Best of 1, Best of 3, Best of 3 (team: 3 Pokémon, draft 4 moves each, HP carries over, play until one side has all three knocked out)
-- Own HP counter (steps of 10), move cards flip with a 1-turn cooldown and return when another move is used
-- Thai move cards where available (121 of 144); English cards for the rest, and wherever the Thai card does not match the English one (currently Electric Rush)
+- Best of One: one game
+- Best of Three: first to 2 wins, same character and 4 moves all match
+- Team: 3 characters with drafted moves, HP carries over, play until one side has all three knocked out
+- One Device: two players on one phone (split screen, top half rotated), automatic win/loss, weakness hint (+20), Best of One or Best of Three
+
+Other features: first-visit tutorial (? button on the home screen), tap-to-select move cards, vibration on KO (Android), screen stays awake during play where supported.
+
+## Data
+
+- 23 characters and 204 move cards from PlakoroDB, including Exploration Box 2
+- Thai move cards for 121 cards (ST01-ST09, EBW01). English cards are used for everything else: Altaria, Dragonite, Exploration Box 2 characters, promo cards, and Electric Rush (the Thai wording differs from the English card)
 
 ## Known limits
 
-- Altaria, Dragonite and promo cards are still English (no Thai file yet)
-- Best of 3 and team rules are house rules, not official rules
-- Only your own side is tracked; opponent KOs are entered by hand
-- Tested with an automated simulation, not yet on many real devices
+- Only HP and move cooldown are tracked. The app does not roll dice or calculate damage; the weakness hint only reminds you of +20.
+- Team and One Device rules are house rules, not official rules.
+- One Device does not support Team mode.
+- Tested with automated simulations, not on many real devices.
 
 ## Deploy to Vercel
 
