@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Plakoro Companion v2.0</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#0C0D10"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Plakoro">
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <style>
 @font-face {
   font-family: 'Prompt';
@@ -196,7 +197,7 @@ if(!S||(S.ch!==null&&!D.chars[S.ch]))S=fresh();
 const $=id=>document.getElementById(id),A=$('app');
 const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const TT={Grass:'หญ้า',Fire:'ไฟ',Water:'น้ำ',Electric:'ไฟฟ้า',Psychic:'พลังจิต',Fighting:'ต่อสู้',Dark:'ความมืด',Steel:'เหล็ก',Dragon:'มังกร',Flying:'บิน',Normal:'ปกติ'};
+const TT={Grass:'หญ้า',Fire:'ไฟ',Water:'น้ำ',Electric:'ไฟฟ้า',Psychic:'พลังจ���ต',Fighting:'ต่อสู้',Dark:'ความมืด',Steel:'เหล็ก',Dragon:'มังกร',Flying:'บิน',Normal:'ปกติ'};
 const tn=c=>c.th||c.name;
 const pillOld=(t,x)=>`<span class="pill" style="background:${TC[t]};${t==='Electric'?'color:#1d1b18':''}">${t}${x||''}</span>`;
 const pill=(t,x)=>`<span class="tag">${TT[t]||t}${x||''}</span>`;
@@ -253,7 +254,7 @@ function tgameV(){
 }
 function modeV(){
   A.innerHTML=`<div class="bar"><h1 style="flex:1;margin:10px 0 8px">เลือกรูปแบบการเล่น</h1><button class="qm" data-a="tut" aria-label="วิธีใช้งาน">?</button></div>
-  <button class="card md" data-a="bo" data-v="1"><b>Best of One</b><span class="lbl">เกมเดียว ใครหมดสภาพก่อนแพ้</span></button>
+  <button class="card md" data-a="bo" data-v="1"><b>Best of One</b><span class="lbl">เกมเดียว ใ��รหมดสภาพก่อนแพ้</span></button>
   <button class="card md" data-a="bo" data-v="3"><b>Best of Three</b><span class="lbl">ชนะ 2 เกมก่อน ใช้ตัวละครและท่าชุดเดิมตลอดแมตช์</span></button>
   <button class="card md" data-a="team"><b>Team</b><span class="lbl">เลือก 3 ตัวละครและดราฟท์ท่า เล่นจนกว่าฝ่ายใดหมดสภาพครบ 3 ตัว เปลี่ยนตัวระหว่างเล่นไม่ได้</span></button>
   <button class="card md" data-a="duo"><b>One Device</b><span class="lbl">สองคน เครื่องเดียว วางเครื่องกลางโต๊ะ แบ่งครึ่งหน้าจอหันเข้าหากัน นับ HP ของทั้งคู่</span></button>${CR}`;
